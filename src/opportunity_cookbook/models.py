@@ -123,6 +123,21 @@ class BuildVsBuy:
 
 
 @dataclass(frozen=True)
+class AlternativeEconomics:
+    """Comparable first-year costs for a buy/configure alternative."""
+
+    setup_cost: Decimal
+    recurring_annual_cost: Decimal
+    internal_administration_cost: Decimal
+    residual_annual_burden: Decimal
+    risk_allowance: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        for name, value in vars(self).items():
+            _nonnegative(value, name)
+
+
+@dataclass(frozen=True)
 class OpportunityScenario:
     business_name: str
     meaningful_problem: bool
