@@ -32,7 +32,9 @@ def implementation_delivery_cost(d: DeliveryEconomics) -> Decimal:
 
 
 def annual_support_cost(d: DeliveryEconomics) -> Decimal:
-    return d.annual_support_hours * d.support_hourly_cost
+    """Annual engineering plus non-labor obligations such as hosting."""
+    return (d.annual_support_hours * d.support_hourly_cost
+            + d.annual_support_other_direct_costs)
 
 
 def solutions_hours(s: SolutionsEconomics) -> Decimal:

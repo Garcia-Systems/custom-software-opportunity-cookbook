@@ -22,6 +22,7 @@ python -m venv .venv
 python -m pip install -e '.[test]'
 pytest
 python examples/opportunity_framework.py
+python examples/independent_restaurant.py
 ```
 
 The editable installation makes the `src/` package importable by the example. Tests can also run directly from a checkout because pytest's path is configured in `pyproject.toml`.
@@ -29,7 +30,8 @@ The editable installation makes the `src/` package importable by the example. Te
 ## Chapters
 
 - [Chapter 0 — How to Evaluate a Custom Software Opportunity](chapters/00-opportunity-framework.md) — implemented
-- Cases 1–14 — planned, **not implemented**
+- [Case 1 — The Independent Restaurant](chapters/01-independent-restaurant.md) — implemented
+- Cases 2–14 — planned, **not implemented**
 
 ## Package map
 
@@ -38,5 +40,7 @@ The editable installation makes the `src/` package importable by the example. Te
 - `analysis.py`: ordered decision gates and traceable reasons.
 - `verdicts.py`: stable machine identifiers with readable labels.
 - `examples/opportunity_framework.py`: one tiny, fictional demonstration—not a numbered case.
+- `independent_restaurant.py`: immutable Case 1 assumptions and scenario variants.
+- `examples/independent_restaurant.py`: executable Case 1 analysis.
 
 The tool evaluates opportunities; it does not implement a fictional customer's workflow.
