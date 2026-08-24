@@ -109,4 +109,4 @@ Real discovery must establish which problems remain after modern SaaS, which int
 
 ---
 
-[← Previous: Case 5 — Tourism / Attraction Operator](05-tourism-attraction.md) · [Book home](../README.md) · Next: Case 7 — planned (not implemented)
+[← Previous: Case 5 — Tourism / Attraction Operator](05-tourism-attraction.md) · [Book home](../README.md) · [Next: Case 7 — The Construction / Trades Company](07-construction-trades.md)

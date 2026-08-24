@@ -28,6 +28,7 @@ python examples/independent_hotel.py
 python examples/hotel_group.py
 python examples/tourism_attraction.py
 python examples/multi_location_retail.py
+python examples/construction_trades.py
 ```
 
 The editable installation makes the `src/` package importable by the example. Tests can also run directly from a checkout because pytest's path is configured in `pyproject.toml`.
@@ -41,7 +42,8 @@ The editable installation makes the `src/` package importable by the example. Te
 - [Case 4 — The Small Hotel Group](chapters/04-hotel-group.md) — implemented
 - [Case 5 — The Tourism / Attraction Operator](chapters/05-tourism-attraction.md) — implemented
 - [Case 6 — The Multi-Location Retailer](chapters/06-multi-location-retail.md) — implemented
-- Cases 7–14 — planned, **not implemented**
+- [Case 7 — The Construction / Trades Company](chapters/07-construction-trades.md) — implemented
+- Cases 8–14 — planned, **not implemented**
 
 ## Package map
 
@@ -63,5 +65,7 @@ The editable installation makes the `src/` package importable by the example. Te
 - `examples/tourism_attraction.py`: executable Case 5 analysis and implemented-case comparison.
 - `multi_location_retail.py`: immutable Case 6 burden, alternative economics, multi-location delivery, support, and scenario assumptions.
 - `examples/multi_location_retail.py`: executable Case 6 analysis and six-case comparison.
+- `construction_trades.py`: immutable Case 7 handoff, billing-timing, reliability, support, alternatives, and scenario assumptions.
+- `examples/construction_trades.py`: executable Case 7 analysis and seven-case comparison.
 
 The tool evaluates opportunities; it does not implement a fictional customer's workflow.
