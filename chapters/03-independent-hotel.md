@@ -123,4 +123,4 @@ The implemented-case calculation asks: **Does the independent hotel behave econo
 python examples/independent_hotel.py
 ```
 
-[Previous: Case 2](02-restaurant-group.md) · [Book home](../README.md) · Next: Case 4 — planned
+[Previous: Case 2](02-restaurant-group.md) · [Book home](../README.md) · [Next: Case 4](04-hotel-group.md)
