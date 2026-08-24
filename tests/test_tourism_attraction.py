@@ -91,12 +91,12 @@ def test_uncertain_upside_is_explicit_and_does_not_contaminate_baseline():
     assert baseline == baseline_case()
 
 
-def test_implemented_comparison_has_cases_one_through_five_and_is_calculated():
+def test_implemented_comparison_has_cases_one_through_six_and_is_calculated():
     rows = implemented_case_comparison()
     assert rows == implemented_case_comparison()
     assert tuple(r.name for r in rows) == ("Independent restaurant", "Restaurant group",
-        "Independent hotel", "Hotel group", "Tourism attraction")
-    assert rows[-1].recoverable_value == baseline_case().recoverable_value
+        "Independent hotel", "Hotel group", "Tourism attraction", "Multi-location retailer")
+    assert rows[-2].recoverable_value == baseline_case().recoverable_value
 
 
 @pytest.mark.parametrize("peak,off", [(D("-1"), D("1")), (D("1"), D("-1"))])

@@ -1,7 +1,23 @@
 """Plain, deterministic calculations; monetary inputs and outputs are Decimal."""
 
 from decimal import Decimal
-from .models import CustomerEconomics, DeliveryEconomics, SolutionsEconomics
+from .models import AlternativeEconomics, CustomerEconomics, DeliveryEconomics, SolutionsEconomics
+
+
+def alternative_first_year_effect(a: AlternativeEconomics) -> Decimal:
+    """Cash costs, retained burden, and an explicit risk allowance."""
+    return sum(vars(a).values(), Decimal("0"))
+
+
+def custom_first_year_effect(c: CustomerEconomics,
+                             risk_allowance: Decimal = Decimal("0")) -> Decimal | None:
+    """Custom spend plus burden the intervention is not expected to recover."""
+    if risk_allowance < 0:
+        raise ValueError("risk_allowance cannot be negative")
+    if c.current_state_annual_burden is None or c.recoverable_value is None:
+        return None
+    return (c.implementation_price + c.recurring_annual_fee
+            + c.current_state_annual_burden - c.recoverable_value + risk_allowance)
 
 
 def customer_net_annual_benefit(c: CustomerEconomics) -> Decimal | None:
