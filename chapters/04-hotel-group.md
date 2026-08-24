@@ -150,4 +150,4 @@ Central lessons: scale can improve economics without multiplying delivery; stand
 python examples/hotel_group.py
 ```
 
-[Previous: Case 3](03-independent-hotel.md) · [Book home](../README.md) · Next: Case 5 — planned
+[Previous: Case 3](03-independent-hotel.md) · [Book home](../README.md) · [Next: Case 5 — The Tourism / Attraction Operator](05-tourism-attraction.md)
