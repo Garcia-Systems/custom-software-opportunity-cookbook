@@ -24,6 +24,7 @@ pytest
 python examples/opportunity_framework.py
 python examples/independent_restaurant.py
 python examples/restaurant_group.py
+python examples/independent_hotel.py
 ```
 
 The editable installation makes the `src/` package importable by the example. Tests can also run directly from a checkout because pytest's path is configured in `pyproject.toml`.
@@ -33,7 +34,8 @@ The editable installation makes the `src/` package importable by the example. Te
 - [Chapter 0 — How to Evaluate a Custom Software Opportunity](chapters/00-opportunity-framework.md) — implemented
 - [Case 1 — The Independent Restaurant](chapters/01-independent-restaurant.md) — implemented
 - [Case 2 — The Five-Location Restaurant Group](chapters/02-restaurant-group.md) — implemented
-- Cases 3–14 — planned, **not implemented**
+- [Case 3 — The Independent Hotel](chapters/03-independent-hotel.md) — implemented
+- Cases 4–14 — planned, **not implemented**
 
 ## Package map
 
@@ -47,5 +49,7 @@ The editable installation makes the `src/` package importable by the example. Te
 - `scaling.py`: reusable fixed/shared, per-unit, and exception delivery/support assumptions.
 - `restaurant_group.py`: immutable Case 2 assumptions, variants, and calculated Case 1 comparison.
 - `examples/restaurant_group.py`: executable Case 2 analysis.
+- `independent_hotel.py`: immutable Case 3 burden assumptions and integration-access variants.
+- `examples/independent_hotel.py`: executable Case 3 analysis and implemented-case comparison.
 
 The tool evaluates opportunities; it does not implement a fictional customer's workflow.
