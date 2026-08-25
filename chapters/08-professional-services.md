@@ -129,4 +129,4 @@ Real discovery must establish what the firm owns, what remains manual after reas
 
 ---
 
-[← Previous: Case 7 — The Construction / Trades Company](07-construction-trades.md) · [Book home](../README.md) · Next: Case 9 — planned (not implemented)
+[← Previous: Case 7 — The Construction / Trades Company](07-construction-trades.md) · [Book home](../README.md) · [Next: Case 9 — The Local Government Department →](09-local-government.md)

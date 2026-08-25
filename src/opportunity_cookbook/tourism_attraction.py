@@ -195,10 +195,12 @@ class ImplementedCaseRow:
     engineering_hours: D
     reuse: D | None
     verdict: str
+    delivery_difficulty: str
+    sales_procurement_difficulty: str
 
 
 def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
-    """Calculated comparison for implemented Cases 1–8 only."""
+    """Calculated comparison for implemented Cases 1–9; no composite score."""
     from .analysis import analyze
     from .economics import reuse_percentage
     from .hotel_group import baseline_case as hotel_group
@@ -208,6 +210,7 @@ def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
     from .restaurant_group import baseline_case as restaurant_group
     from .construction_trades import baseline_case as construction
     from .professional_services import baseline_case as professional_services
+    from .local_government import baseline_case as local_government
 
     sources = (("Independent restaurant", restaurant_case().scenario),
                ("Restaurant group", restaurant_group().scenario),
@@ -216,12 +219,15 @@ def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
                ("Tourism attraction", baseline_case().scenario),
                ("Multi-location retailer", retail().scenario),
                ("Construction / trades", construction().scenario),
-               ("Professional services", professional_services().scenario))
+               ("Professional services", professional_services().scenario),
+               ("Local government", local_government().scenario))
     rows = []
     for name, scenario in sources:
         d = scenario.delivery
         hours = sum((d.reusable_engineering_hours, d.customer_specific_engineering_hours,
                      d.qa_hours, d.deployment_hours, d.rework_reserve_hours), D("0"))
         rows.append(ImplementedCaseRow(name, scenario.customer.recoverable_value,
-            hours, reuse_percentage(d), analyze(scenario).verdict.value))
+            hours, reuse_percentage(d), analyze(scenario).verdict.value,
+            scenario.technical.integration_complexity.value,
+            scenario.sales.procurement_difficulty.value))
     return tuple(rows)
