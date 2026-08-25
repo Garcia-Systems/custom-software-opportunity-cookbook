@@ -177,4 +177,4 @@ The SaaS option produces the strongest baseline first-year net benefit, has fast
 
 ---
 
-[← Previous: Case 11 — The Healthcare Organization](11-healthcare.md) · [Book home](../README.md) · Next: Case 13 — planned (not implemented)
+[← Previous: Case 11 — The Healthcare Organization](11-healthcare.md) · [Book home](../README.md) · [Next: Case 13 — Great Customer Value, Bad Delivery Economics →](13-bad-delivery-economics.md)

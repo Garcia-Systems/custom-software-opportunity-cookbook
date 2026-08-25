@@ -77,6 +77,48 @@ def implementation_delivery_cost(d: DeliveryEconomics) -> Decimal:
     return hours * d.engineering_hourly_cost + d.other_direct_costs
 
 
+def implementation_contribution(implementation_revenue: Decimal,
+                                direct_implementation_cost: Decimal) -> Decimal:
+    """Revenue left after direct implementation cost (before solutions labor)."""
+    if implementation_revenue < 0 or direct_implementation_cost < 0:
+        raise ValueError("implementation revenue and cost cannot be negative")
+    return implementation_revenue - direct_implementation_cost
+
+
+def delivery_break_even_price(direct_implementation_cost: Decimal) -> Decimal:
+    """The implementation price that exactly covers direct delivery."""
+    if direct_implementation_cost < 0:
+        raise ValueError("direct_implementation_cost cannot be negative")
+    return direct_implementation_cost
+
+
+def target_contribution_price(direct_implementation_cost: Decimal,
+                              required_contribution: Decimal) -> Decimal:
+    """Direct delivery cost plus an explicit required implementation contribution."""
+    if direct_implementation_cost < 0 or required_contribution < 0:
+        raise ValueError("price-corridor assumptions cannot be negative")
+    return direct_implementation_cost + required_contribution
+
+
+def customer_maximum_economic_price(recoverable_annual_value: Decimal,
+                                    recurring_annual_fee: Decimal,
+                                    required_retained_benefit: Decimal) -> Decimal:
+    """Highest implementation price preserving a stated first-year benefit."""
+    if any(value < 0 for value in (recoverable_annual_value,
+                                   recurring_annual_fee,
+                                   required_retained_benefit)):
+        raise ValueError("price-corridor assumptions cannot be negative")
+    return max(Decimal("0"), recoverable_annual_value - recurring_annual_fee
+               - required_retained_benefit)
+
+
+def has_feasible_price_corridor(minimum_sustainable_price: Decimal,
+                                maximum_economic_price: Decimal) -> bool:
+    if minimum_sustainable_price < 0 or maximum_economic_price < 0:
+        raise ValueError("price-corridor bounds cannot be negative")
+    return minimum_sustainable_price <= maximum_economic_price
+
+
 def annual_support_cost(d: DeliveryEconomics) -> Decimal:
     """Annual engineering plus non-labor obligations such as hosting."""
     return (d.annual_support_hours * d.support_hourly_cost

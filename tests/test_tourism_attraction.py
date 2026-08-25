@@ -97,7 +97,8 @@ def test_implemented_comparison_has_cases_one_through_ten_and_is_calculated():
     assert tuple(r.name for r in rows) == ("Independent restaurant", "Restaurant group",
         "Independent hotel", "Hotel group", "Tourism attraction", "Multi-location retailer",
         "Construction / trades", "Professional services", "Local government",
-        "University department", "Healthcare organization", "Perfect-looking deal")
+        "University department", "Healthcare organization", "Perfect-looking deal",
+        "Bad delivery economics")
     assert rows[4].recoverable_value == baseline_case().recoverable_value
 
 
