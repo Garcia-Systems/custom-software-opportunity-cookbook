@@ -114,4 +114,4 @@ Cases 1–6 primarily examine reporting/analytics integration across restaurants
 
 ---
 
-[← Previous: Case 6 — The Multi-Location Retailer](06-multi-location-retail.md) · [Book home](../README.md) · Next: Case 8 — planned (not implemented)
+[← Previous: Case 6 — The Multi-Location Retailer](06-multi-location-retail.md) · [Book home](../README.md) · [Next: Case 8 — The Professional Services Firm →](08-professional-services.md)

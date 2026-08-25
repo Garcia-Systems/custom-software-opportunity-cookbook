@@ -198,7 +198,7 @@ class ImplementedCaseRow:
 
 
 def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
-    """Calculated comparison for implemented Cases 1–7 only."""
+    """Calculated comparison for implemented Cases 1–8 only."""
     from .analysis import analyze
     from .economics import reuse_percentage
     from .hotel_group import baseline_case as hotel_group
@@ -207,6 +207,7 @@ def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
     from .multi_location_retail import baseline_case as retail
     from .restaurant_group import baseline_case as restaurant_group
     from .construction_trades import baseline_case as construction
+    from .professional_services import baseline_case as professional_services
 
     sources = (("Independent restaurant", restaurant_case().scenario),
                ("Restaurant group", restaurant_group().scenario),
@@ -214,7 +215,8 @@ def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
                ("Hotel group", hotel_group().scenario),
                ("Tourism attraction", baseline_case().scenario),
                ("Multi-location retailer", retail().scenario),
-               ("Construction / trades", construction().scenario))
+               ("Construction / trades", construction().scenario),
+               ("Professional services", professional_services().scenario))
     rows = []
     for name, scenario in sources:
         d = scenario.delivery

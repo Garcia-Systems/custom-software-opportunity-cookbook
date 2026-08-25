@@ -91,12 +91,12 @@ def test_uncertain_upside_is_explicit_and_does_not_contaminate_baseline():
     assert baseline == baseline_case()
 
 
-def test_implemented_comparison_has_cases_one_through_seven_and_is_calculated():
+def test_implemented_comparison_has_cases_one_through_eight_and_is_calculated():
     rows = implemented_case_comparison()
     assert rows == implemented_case_comparison()
     assert tuple(r.name for r in rows) == ("Independent restaurant", "Restaurant group",
         "Independent hotel", "Hotel group", "Tourism attraction", "Multi-location retailer",
-        "Construction / trades")
+        "Construction / trades", "Professional services")
     assert rows[4].recoverable_value == baseline_case().recoverable_value
 
 
