@@ -47,10 +47,10 @@ def test_strong_saas_changes_final_verdict_and_comparison_uses_it():
     assert analyze(case.final_scenario).verdict is Verdict.BUY_CONFIGURE
     assert case.recommendation == "Buy / configure"
     rows = implemented_case_comparison()
-    assert len(rows) == 12
-    assert rows[-1].name == "Perfect-looking deal"
-    assert rows[-1].verdict == Verdict.BUY_CONFIGURE.value
-    assert rows[-1].verdict != analyze(case.stage_one).verdict.value
+    assert len(rows) == 13
+    assert rows[11].name == "Perfect-looking deal"
+    assert rows[11].verdict == Verdict.BUY_CONFIGURE.value
+    assert rows[11].verdict != analyze(case.stage_one).verdict.value
 
 
 def test_weak_and_expensive_saas_make_custom_competitive_again():

@@ -91,7 +91,7 @@ def test_case_nine_ten_and_implemented_comparison_are_deterministic():
     assert comparison.university_solutions_hours > comparison.government_solutions_hours
     assert comparison.university_permission_difficulty == "high"
     rows = implemented_case_comparison()
-    assert len(rows) == 12 and rows[-3].name == "University department"
+    assert len(rows) == 13 and rows[9].name == "University department"
 
 
 @pytest.mark.parametrize("units,cost,rate", [(D("-1"), D("1"), D(".5")),

@@ -90,9 +90,9 @@ def test_verdict_reasons_remain_traceable_and_comparison_has_case_7():
         existing_saas_case, high_burden_case, low_burden_case,
         highly_customer_specific_case, unsustainable_support_case))
     rows = implemented_case_comparison()
-    assert len(rows) == 12
-    assert rows[-6].name == "Construction / trades"
-    assert rows[-6].recoverable_value == baseline_case().recoverable_value
+    assert len(rows) == 13
+    assert rows[6].name == "Construction / trades"
+    assert rows[6].recoverable_value == baseline_case().recoverable_value
 
 
 @pytest.mark.parametrize("units,cost", [(D("-1"), D("1")), (D("1"), D("-1"))])
