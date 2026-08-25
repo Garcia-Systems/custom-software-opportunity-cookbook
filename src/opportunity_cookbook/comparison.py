@@ -7,6 +7,7 @@ separate from the decision rules.
 
 from dataclasses import dataclass
 from decimal import Decimal as D
+from typing import Callable
 
 from .analysis import OpportunityAnalysis, analyze
 from .economics import (annual_support_cost, effective_contribution_per_solutions_hour,
@@ -25,11 +26,13 @@ from . import (bad_delivery_economics, bad_sales_motion, buy_dont_build,
 class CaseDefinition:
     case_id: int
     title: str
-    builder: object
+    builder: Callable[[], object]
     archetypes: tuple[str, ...]
 
 
-DEFINITIONS = (
+# The one canonical, ordered baseline registry.  Entries point to case factories
+# rather than materializing mutable presentation data or copying assumptions.
+BASELINE_CASES = (
     CaseDefinition(1, "Independent restaurant", independent_restaurant.baseline_case, ("single-site reporting",)),
     CaseDefinition(2, "Restaurant group", restaurant_group.baseline_case, ("multi-unit integration",)),
     CaseDefinition(3, "Independent hotel", independent_hotel.baseline_case, ("single-site reporting",)),
@@ -99,7 +102,7 @@ def _scenario_and_analysis(case) -> tuple[OpportunityScenario, OpportunityAnalys
 
 def comparison_rows() -> tuple[ComparisonRow, ...]:
     rows = []
-    for definition in DEFINITIONS:
+    for definition in BASELINE_CASES:
         case = definition.builder()
         scenario, result = _scenario_and_analysis(case)
         c, d, sol = scenario.customer, scenario.delivery, scenario.solutions
