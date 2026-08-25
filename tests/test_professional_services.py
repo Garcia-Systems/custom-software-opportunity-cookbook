@@ -79,7 +79,7 @@ def test_case_seven_eight_and_eight_case_comparisons_are_calculated_and_determin
     assert comparison.professional_services_verdict == "BUY / CONFIGURE"
     assert comparison.construction_alternative_effect > comparison.professional_services_alternative_effect
     rows = implemented_case_comparison()
-    assert len(rows) == 13
+    assert len(rows) == 14
     assert rows[7].name == "Professional services"
     assert rows[7].recoverable_value == baseline_case().recoverable_value
 

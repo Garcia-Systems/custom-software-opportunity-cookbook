@@ -154,3 +154,45 @@ def recurring_support_contribution(c: CustomerEconomics, d: DeliveryEconomics) -
 def reuse_percentage(d: DeliveryEconomics) -> Decimal | None:
     total = d.reusable_engineering_hours + d.customer_specific_engineering_hours
     return None if total == 0 else d.reusable_engineering_hours / total
+
+
+def expected_sales_hours_per_win(hours_per_qualified_opportunity: Decimal,
+                                 close_probability: Decimal) -> Decimal:
+    """Deterministic denominator calculation, not a pipeline forecast."""
+    if hours_per_qualified_opportunity < 0:
+        raise ValueError("sales hours cannot be negative")
+    if not Decimal("0") < close_probability <= Decimal("1"):
+        raise ValueError("close_probability must be greater than 0 and at most 1")
+    return hours_per_qualified_opportunity / close_probability
+
+
+def expected_acquisition_cost(expected_hours_per_win: Decimal,
+                              solutions_hourly_cost: Decimal,
+                              channel_cost: Decimal = Decimal("0")) -> Decimal:
+    """Expected direct selling labor plus an explicit referral/channel charge."""
+    if min(expected_hours_per_win, solutions_hourly_cost, channel_cost) < 0:
+        raise ValueError("acquisition assumptions cannot be negative")
+    return expected_hours_per_win * solutions_hourly_cost + channel_cost
+
+
+def customer_contribution_before_acquisition(
+        implementation_margin: Decimal, recurring_margin: Decimal) -> Decimal:
+    return implementation_margin + recurring_margin
+
+
+def customer_contribution_after_acquisition(
+        contribution_before_acquisition: Decimal, acquisition_cost: Decimal) -> Decimal:
+    if acquisition_cost < 0:
+        raise ValueError("acquisition_cost cannot be negative")
+    return contribution_before_acquisition - acquisition_cost
+
+
+def acquisition_adjusted_minimum_price(
+        direct_delivery_cost: Decimal, acquisition_cost: Decimal,
+        required_contribution: Decimal,
+        expected_recurring_contribution: Decimal = Decimal("0")) -> Decimal:
+    """Implementation price needed after acquisition and expected recurring margin."""
+    if min(direct_delivery_cost, acquisition_cost, required_contribution) < 0:
+        raise ValueError("price-corridor assumptions cannot be negative")
+    return max(Decimal("0"), direct_delivery_cost + acquisition_cost
+               + required_contribution - expected_recurring_contribution)

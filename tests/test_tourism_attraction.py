@@ -98,7 +98,7 @@ def test_implemented_comparison_has_cases_one_through_ten_and_is_calculated():
         "Independent hotel", "Hotel group", "Tourism attraction", "Multi-location retailer",
         "Construction / trades", "Professional services", "Local government",
         "University department", "Healthcare organization", "Perfect-looking deal",
-        "Bad delivery economics")
+        "Bad delivery economics", "Bad sales motion")
     assert rows[4].recoverable_value == baseline_case().recoverable_value
 
 

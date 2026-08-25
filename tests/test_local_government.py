@@ -73,7 +73,7 @@ def test_case_seven_nine_and_nine_case_comparison_are_deterministic():
     assert comparison.government_verdict == "POOR TARGET CUSTOMER"
     assert comparison.government_solutions_hours > comparison.construction_solutions_hours
     rows = implemented_case_comparison()
-    assert len(rows) == 13 and rows[8].name == "Local government"
+    assert len(rows) == 14 and rows[8].name == "Local government"
     assert rows[10].sales_procurement_difficulty == "high"
 
 
