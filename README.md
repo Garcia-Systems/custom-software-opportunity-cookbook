@@ -33,6 +33,7 @@ python examples/professional_services.py
 python examples/local_government.py
 python examples/university.py
 python examples/healthcare.py
+python examples/buy_dont_build.py
 ```
 
 The editable installation makes the `src/` package importable by the example. Tests can also run directly from a checkout because pytest's path is configured in `pyproject.toml`.
@@ -51,7 +52,8 @@ The editable installation makes the `src/` package importable by the example. Te
 - [Case 9 — The Local Government Department](chapters/09-local-government.md) — implemented
 - [Case 10 — The University Department](chapters/10-university.md) — implemented
 - [Case 11 — The Healthcare Organization](chapters/11-healthcare.md) — implemented
-- Cases 12–14 — planned, **not implemented**
+- [Case 12 — The Perfect-Looking Deal That Isn't](chapters/12-buy-dont-build.md) — implemented
+- Cases 13–14 — planned, **not implemented**
 
 ## Package map
 
@@ -83,5 +85,7 @@ The editable installation makes the `src/` package importable by the example. Te
 - `examples/university.py`: executable Case 10 analysis and ten-case comparison.
 - `healthcare.py`: immutable Case 11 administrative burden, security/privacy, validation, uncertainty, support, alternatives, scenarios, and cross-case assumptions.
 - `examples/healthcare.py`: executable Case 11 analysis and eleven-case comparison.
+- `buy_dont_build.py`: immutable Case 12 two-stage discovery, residual-burden, four-option, edge, break-even, and scenario assumptions.
+- `examples/buy_dont_build.py`: executable Case 12 analysis and twelve-case comparison using the fully discovered verdict.
 
 The tool evaluates opportunities; it does not implement a fictional customer's workflow.

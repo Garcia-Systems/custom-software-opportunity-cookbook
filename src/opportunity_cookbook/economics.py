@@ -9,6 +9,35 @@ def alternative_first_year_effect(a: AlternativeEconomics) -> Decimal:
     return sum(vars(a).values(), Decimal("0"))
 
 
+def alternative_recovered_burden(original_burden: Decimal,
+                                  residual_burden: Decimal) -> Decimal:
+    """Burden removed by an alternative, kept separate from its cash cost."""
+    if original_burden < 0 or residual_burden < 0:
+        raise ValueError("burdens cannot be negative")
+    if residual_burden > original_burden:
+        raise ValueError("residual_burden cannot exceed original_burden")
+    return original_burden - residual_burden
+
+
+def incremental_custom_value(custom_recoverable_value: Decimal,
+                             alternative_recoverable_value: Decimal) -> Decimal:
+    """Additional annual burden custom removes above the best alternative."""
+    if custom_recoverable_value < 0 or alternative_recoverable_value < 0:
+        raise ValueError("recoverable values cannot be negative")
+    return max(Decimal("0"), custom_recoverable_value - alternative_recoverable_value)
+
+
+def break_even_alternative_residual_burden(
+        custom_first_year_total_effect: Decimal,
+        alternative: AlternativeEconomics) -> Decimal:
+    """Residual burden at which buy/configure and custom first-year effects tie."""
+    if custom_first_year_total_effect < 0:
+        raise ValueError("custom_first_year_total_effect cannot be negative")
+    fixed = (alternative.setup_cost + alternative.recurring_annual_cost
+             + alternative.internal_administration_cost + alternative.risk_allowance)
+    return max(Decimal("0"), custom_first_year_total_effect - fixed)
+
+
 def custom_first_year_effect(c: CustomerEconomics,
                              risk_allowance: Decimal = Decimal("0")) -> Decimal | None:
     """Custom spend plus burden the intervention is not expected to recover."""
