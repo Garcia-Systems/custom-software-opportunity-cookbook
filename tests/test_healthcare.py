@@ -115,7 +115,7 @@ def test_no_clinical_benefit_or_patient_fixture_and_comparisons_are_deterministi
     assert "authority and governance" in CASE_NINE_TEN_ELEVEN_PROGRESSION[1]
     assert "delivery and support complexity" in CASE_NINE_TEN_ELEVEN_PROGRESSION[2]
     rows = implemented_case_comparison()
-    assert len(rows) == 11 and rows[-1].name == "Healthcare organization"
+    assert len(rows) == 12 and rows[-2].name == "Healthcare organization"
 
 
 @pytest.mark.parametrize("units,cost,rate", [(D("-1"), D("1"), D(".5")),

@@ -162,4 +162,4 @@ This is not forced negative because the domain is healthcare; it follows the sam
 
 ---
 
-[← Previous: Case 10 — The University Department](10-university.md) · [Book home](../README.md) · Next: Case 12 — planned (not implemented)
+[← Previous: Case 10 — The University Department](10-university.md) · [Book home](../README.md) · [Next: Case 12 — The Perfect-Looking Deal That Isn't](12-buy-dont-build.md)
