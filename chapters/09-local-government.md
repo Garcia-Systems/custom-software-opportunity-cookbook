@@ -131,4 +131,4 @@ Real discovery must investigate purchasing thresholds, procurement pathways and 
 
 ---
 
-[← Previous: Case 8 — The Professional Services Firm](08-professional-services.md) · [Book home](../README.md) · Next: Case 10 — planned (not implemented)
+[← Previous: Case 8 — The Professional Services Firm](08-professional-services.md) · [Book home](../README.md) · [Next: Case 10 — The University Department →](10-university.md)

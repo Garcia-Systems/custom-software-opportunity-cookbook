@@ -79,9 +79,9 @@ def test_case_seven_eight_and_eight_case_comparisons_are_calculated_and_determin
     assert comparison.professional_services_verdict == "BUY / CONFIGURE"
     assert comparison.construction_alternative_effect > comparison.professional_services_alternative_effect
     rows = implemented_case_comparison()
-    assert len(rows) == 9
-    assert rows[-2].name == "Professional services"
-    assert rows[-2].recoverable_value == baseline_case().recoverable_value
+    assert len(rows) == 10
+    assert rows[-3].name == "Professional services"
+    assert rows[-3].recoverable_value == baseline_case().recoverable_value
 
 
 def test_all_verdict_reasons_are_traceable():

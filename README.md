@@ -31,6 +31,7 @@ python examples/multi_location_retail.py
 python examples/construction_trades.py
 python examples/professional_services.py
 python examples/local_government.py
+python examples/university.py
 ```
 
 The editable installation makes the `src/` package importable by the example. Tests can also run directly from a checkout because pytest's path is configured in `pyproject.toml`.
@@ -47,7 +48,8 @@ The editable installation makes the `src/` package importable by the example. Te
 - [Case 7 — The Construction / Trades Company](chapters/07-construction-trades.md) — implemented
 - [Case 8 — The Professional Services Firm](chapters/08-professional-services.md) — implemented
 - [Case 9 — The Local Government Department](chapters/09-local-government.md) — implemented
-- Cases 10–14 — planned, **not implemented**
+- [Case 10 — The University Department](chapters/10-university.md) — implemented
+- Cases 11–14 — planned, **not implemented**
 
 ## Package map
 
@@ -75,5 +77,7 @@ The editable installation makes the `src/` package importable by the example. Te
 - `examples/professional_services.py`: executable Case 8 analysis and eight-case comparison.
 - `local_government.py`: immutable Case 9 public-service burden, procurement, delivery, support, access, alternative, and scenario assumptions.
 - `examples/local_government.py`: executable Case 9 analysis, Case 7 comparison, and nine-case comparison.
+- `university.py`: immutable Case 10 administrative burden, authority map, governance, delivery, support, alternatives, scenarios, and Case 9 comparison assumptions.
+- `examples/university.py`: executable Case 10 analysis and ten-case comparison.
 
 The tool evaluates opportunities; it does not implement a fictional customer's workflow.
