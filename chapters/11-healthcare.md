@@ -1,5 +1,7 @@
 # Case 11 — The Healthcare Organization
 
+![The Healthcare Organization](../images/chapters/11.png)
+
 > **Fiction notice and boundary:** James River Specialty Clinic Group, its several outpatient clinics, approximately 80 employees, systems, operations, and every figure below are invented educational assumptions—not healthcare benchmarks. This case evaluates administrative custom-software economics. It processes no real information, contains no patient records, offers no medical advice, and models no diagnosis, treatment, clinical prioritization, clinical outcome, or clinical revenue benefit. It is not legal or compliance advice.
 
 ## 1. Business

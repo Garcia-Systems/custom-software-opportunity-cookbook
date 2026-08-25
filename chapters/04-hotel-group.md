@@ -1,5 +1,7 @@
 # Case 4 — The Small Hotel Group
 
+![The Small Hotel Group](../images/chapters/4.png)
+
 > **Fiction notice:** James River Lodging Group and every room count, workflow, hour, cost, price, percentage, and result below are fictional educational assumptions—not hotel-industry benchmarks, market research, or financial advice.
 
 **Core question:** Does hotel-integration economics improve materially when several properties share ownership, management, reporting needs, and some systems? This case is deliberately paired with Case 3, but does not multiply Case 3 by four.

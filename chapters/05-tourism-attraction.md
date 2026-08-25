@@ -1,5 +1,7 @@
 # Case 5 — The Tourism / Attraction Operator
 
+![The Tourism / Attraction Operator](../images/chapters/5.png)
+
 > Every business, operating input, context flag, and financial value below is fictional and educational. Nothing is Williamsburg, Virginia, attraction-industry, or tourism-industry data or a benchmark.
 
 **Core question:** Can connecting ticketing, attendance, staffing, concessions, membership, weather/event context, and guest feedback create enough recoverable value to justify a narrow custom integration?

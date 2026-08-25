@@ -1,5 +1,7 @@
 # Case 7 — The Construction / Trades Company
 
+![The Construction / Trades Company](../images/chapters/7.png)
+
 > Every company, workflow, and number below is a fictional educational assumption—not an industry benchmark, forecast, or recommendation.
 
 ## 1. Business

@@ -2,6 +2,8 @@
 
 [Previous: Case 1](01-independent-restaurant.md) · [Book home](../README.md) · [Next: Case 3](03-independent-hotel.md)
 
+![The Five-Location Restaurant Group](../images/chapters/2.png)
+
 > **Fiction notice:** James River Hospitality Group and every operational, effort, and financial value below are fictional educational assumptions. They are neither Williamsburg restaurant-group data nor industry benchmarks.
 
 ## 1. Business

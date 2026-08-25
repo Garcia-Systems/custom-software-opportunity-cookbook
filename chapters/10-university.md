@@ -1,5 +1,7 @@
 # Case 10 — The University Department
 
+![The University Department](../images/chapters/10.png)
+
 > **Fiction notice:** James River University and its Continuing Education Department are completely fictional and have no relationship to any real university. Every person, system, operational assumption, and financial figure below is invented for education. They are not benchmarks, legal advice, or compliance advice.
 
 ## 1. Business

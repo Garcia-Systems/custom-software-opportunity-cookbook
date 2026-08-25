@@ -1,5 +1,7 @@
 # Case 3 — The Independent Hotel
 
+![The Independent Hotel](../images/chapters/3.png)
+
 > **Fiction notice:** James River Inn, its 138 rooms, workflows, hours, costs, prices, percentages, and every operational or financial value below are fictional educational assumptions. They are not Williamsburg data, hotel benchmarks, market research, or financial advice.
 
 **Core question:** Can one independent hotel create enough recoverable value to justify a narrow custom integration layer without replacing its PMS or reservation systems?

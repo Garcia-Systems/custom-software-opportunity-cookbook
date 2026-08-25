@@ -1,5 +1,7 @@
 # Case 9 — The Local Government Department
 
+![The Local Government Department](../images/chapters/9.png)
+
 > **Fiction notice:** James River County Permitting Department, its county, systems, staffing, requirements, and every operational and financial assumption below are fictional educational values. It does not represent James City County, Williamsburg, or any real agency. These assumptions are not benchmarks or legal/compliance advice.
 
 ## 1. Business

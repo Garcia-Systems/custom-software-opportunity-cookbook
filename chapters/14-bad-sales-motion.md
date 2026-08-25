@@ -1,5 +1,7 @@
 # Case 14 — Great Product, Bad Sales Motion
 
+![Great Product, Bad Sales Motion](../images/chapters/14.png)
+
 > **Fictional educational scenario.** James River Professional Association, every organization, figure, price, labor rate, close rate, and cycle below is invented. They are assumptions to validate, not benchmarks.
 
 ## 1. Business

@@ -2,6 +2,8 @@
 
 [← Previous: Case 12 — The Perfect-Looking Deal That Isn't](12-buy-dont-build.md) · [Book home](../README.md) · [Next: Case 14 — Great Product, Bad Sales Motion →](14-bad-sales-motion.md)
 
+![Great Customer Value, Bad Delivery Economics](../images/chapters/13.png)
+
 > **Fiction notice:** James River Specialty Distribution, every system, interface, workflow, labor rate, hour, price, and result below are invented educational assumptions—not a real distributor, vendor, benchmark, quote, or forecast.
 
 ## 1. Business
