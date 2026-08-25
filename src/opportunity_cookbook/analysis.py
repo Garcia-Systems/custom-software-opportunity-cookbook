@@ -56,8 +56,16 @@ def analyze(s: OpportunityScenario) -> OpportunityAnalysis:
                        or s.sales.customer_accessibility is Level.LOW
                        or s.sales.sales_cycle_months > Decimal("6"))
     if difficult_sales:
-        return OpportunityAnalysis(Verdict.POOR_TARGET, (
-            "Sales, access, cycle, or procurement friction is high for the modeled contract.",))
+        reasons = []
+        if s.sales.procurement_difficulty is Level.HIGH:
+            reasons.append("Procurement difficulty is high for the modeled contract.")
+        if s.sales.close_friction is Level.HIGH:
+            reasons.append("Stakeholder and close friction is high for the modeled contract.")
+        if s.sales.customer_accessibility is Level.LOW:
+            reasons.append("Access to a clear buyer is low for the modeled contract.")
+        if s.sales.sales_cycle_months > Decimal("6"):
+            reasons.append("The modeled sales cycle exceeds six months and consumes scarce solutions capacity.")
+        return OpportunityAnalysis(Verdict.POOR_TARGET, tuple(reasons))
 
     reuse = reuse_percentage(s.delivery)
     if reuse is None or reuse < Decimal("0.40"):
