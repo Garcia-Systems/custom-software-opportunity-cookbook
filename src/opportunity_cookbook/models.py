@@ -70,6 +70,7 @@ class DeliveryEconomics:
     annual_support_hours: Decimal = Decimal("0")
     support_hourly_cost: Decimal = Decimal("0")
     annual_support_other_direct_costs: Decimal = Decimal("0")
+    uncertainty_reserve_hours: Decimal = Decimal("0")
 
     def __post_init__(self) -> None:
         for name, value in vars(self).items():
