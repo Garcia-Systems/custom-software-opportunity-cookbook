@@ -33,7 +33,9 @@ class AlternativeType(Enum):
     DO_NOTHING = "doing nothing"
 
 
-def _nonnegative(value: Decimal | int, name: str) -> None:
+def _nonnegative(value: Decimal, name: str) -> None:
+    if not isinstance(value, Decimal):
+        raise TypeError(f"{name} must be a Decimal")
     if value < 0:
         raise ValueError(f"{name} cannot be negative")
 
@@ -112,6 +114,8 @@ class TechnicalCharacteristics:
     integration_permission_difficulty: Level
 
     def __post_init__(self) -> None:
+        if not isinstance(self.integration_count, int) or isinstance(self.integration_count, bool):
+            raise TypeError("integration_count must be an integer")
         if self.integration_count < 0:
             raise ValueError("integration_count cannot be negative")
 

@@ -44,3 +44,16 @@ def test_negative_hours_rejected_and_zero_denominators_explicit():
     assert first_year_roi(c) is None
     assert payback_period_months(c) is None
     assert effective_contribution_per_solutions_hour(c, d, s) is None
+
+
+@pytest.mark.parametrize("value", [1, 1.0])
+def test_non_decimal_money_cannot_silently_enter_models(value):
+    with pytest.raises(TypeError):
+        CustomerEconomics(value, D("1"), D("1"), D("0"))
+
+
+def test_expected_sales_effort_increases_as_close_probability_falls():
+    effort = D("12")
+    assert expected_sales_hours_per_win(effort, D(".20")) > expected_sales_hours_per_win(
+        effort, D(".50")
+    )

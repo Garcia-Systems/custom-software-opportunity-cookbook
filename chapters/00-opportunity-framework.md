@@ -2,18 +2,26 @@
 
 > What separates an interesting business problem from an economically viable custom-software opportunity?
 
+> **Fiction notice:** All businesses, operational metrics, financial values, labor assumptions, delivery estimates, sales assumptions, and support costs in this repository are fictional educational modeling assumptions unless explicitly cited otherwise.
+
 This framework turns stated assumptions into an **economic hypothesis**. It is a gate-by-gate field guide, not an opportunity score. Every rejection and every encouraging result must name its reasons.
 
 ## The sequence
 
 1. Establish a meaningful problem. If none exists: **NO DEAL**.
 2. Measure current burden and recoverable value. If material facts are missing: **INVESTIGATE**.
-3. examine SaaS, configuration, automation, spreadsheets/process change, and doing nothing. If buying is adequate and materially preferable: **BUY / CONFIGURE**.
+3. Examine SaaS, configuration, automation, spreadsheets/process change, and doing nothing. If buying is adequate and materially preferable: **BUY / CONFIGURE**.
 4. Check feasibility, delivery contribution, customer return, and support coverage. A failed gate means **NO DEAL**.
 5. Check access, procurement, close friction, and cycle. Excessive friction means **POOR TARGET CUSTOMER**.
 6. Distinguish customer-specific work from demonstrated common work. Viable with low reuse is a **ONE-OFF CUSTOM PROJECT**; viable with substantial reuse is **PROMISING — VALIDATE IN DISCOVERY**.
 
 The implementation documents two deliberately simple operating rules: customer benefit must repay implementation within one year, and at least 40% of core engineering hours must be demonstrably reusable for `PROMISING`. These are editable screening policies, not universal truths.
+
+### Verdict precedence
+
+The numbered gates are precedence, not accidental `if` ordering. No meaningful problem is **NO DEAL** first. Missing critical evidence is **INVESTIGATE** before the framework pretends to compare known outcomes. With evidence present, an adequate, materially preferable alternative is **BUY / CONFIGURE**, even if custom delivery would also be uneconomic: the useful recommendation is to buy. Otherwise infeasibility, customer return, delivery, or support failure makes the engagement **NO DEAL** before target-market concerns are considered. If the engagement works, authority, access, procurement, or acquisition friction can make it a **POOR TARGET CUSTOMER** before reuse is considered. Only then does weak cross-customer technical reuse produce **ONE-OFF CUSTOM PROJECT**; passing every gate produces **PROMISING — VALIDATE IN DISCOVERY**.
+
+This precedence also keeps distinct combinations legible: missing authority is investigation when unresolved and poor-target evidence when established; bad acquisition dominates low reuse because the target cannot be won responsibly; low reuse never rescues bad engagement economics. These transparent gates intentionally replace any weighted score.
 
 ## Ten lessons
 
@@ -91,6 +99,8 @@ Good market: a meaningful pattern can repeat across customers.
 ```
 
 Theoretical portability is not evidence of reuse.
+
+The code's single reuse percentage means **cross-customer technical reuse of core engineering only**. It does not measure reuse across locations owned by one customer, repeatability of discovery/demo/proposal work, buyer reachability, or the number of similar customers in a market. Chapters may discuss those separate ideas qualitatively; they must not treat this percentage as proof of sales reuse or market repeatability.
 
 ### 9. Integration-first thinking
 

@@ -63,3 +63,35 @@ def test_missing_assumptions_are_investigate_and_all_reasons_exposed():
 def test_infeasible_is_no_deal():
     s = scenario(); s = replace(s, technical=replace(s.technical, feasibility=Feasibility.INFEASIBLE))
     assert analyze(s).verdict is Verdict.NO_DEAL
+
+
+def test_precedence_is_missing_evidence_then_alternative_then_engagement_economics():
+    s = scenario()
+    inadequate_custom = replace(
+        s,
+        delivery=replace(s.delivery, engineering_hourly_cost=D("1000")),
+        build_vs_buy=replace(s.build_vs_buy, finding=AlternativeFinding.ADEQUATE_BUY),
+    )
+    assert analyze(inadequate_custom).verdict is Verdict.BUY_CONFIGURE
+
+    unresolved = replace(
+        inadequate_custom,
+        customer=replace(inadequate_custom.customer, recoverable_value=None),
+    )
+    assert analyze(unresolved).verdict is Verdict.INVESTIGATE
+
+
+def test_engagement_failure_precedes_sales_and_sales_precedes_reuse():
+    s = scenario()
+    hard_sales_low_reuse = replace(
+        s,
+        delivery=replace(s.delivery, reusable_engineering_hours=D("1")),
+        sales=replace(s.sales, procurement_difficulty=Level.HIGH),
+    )
+    assert analyze(hard_sales_low_reuse).verdict is Verdict.POOR_TARGET
+
+    uneconomic = replace(
+        hard_sales_low_reuse,
+        delivery=replace(hard_sales_low_reuse.delivery, engineering_hourly_cost=D("1000")),
+    )
+    assert analyze(uneconomic).verdict is Verdict.NO_DEAL

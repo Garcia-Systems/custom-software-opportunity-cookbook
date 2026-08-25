@@ -2,6 +2,16 @@
 
 A compact, executable casebook for deciding where custom software might make economic sense—and where it does not. The code models assumptions, calculates three-party economics, and produces a verdict with readable reasons rather than an opaque score.
 
+## What this repository is
+
+A compact executable casebook for evaluating where custom software makes economic sense. It combines immutable fictional assumptions, `Decimal` economics, explicit verdict gates, runnable cases, and a transparent cross-case synthesis.
+
+## What it is not
+
+It is not a market study, an industry benchmark source, a CRM, an ERP, a domain application, or proof that any modeled market is attractive.
+
+## Conceptual progression
+
 ```text
 Restaurant Technology Lab                 What could we build?
                     ↓
@@ -10,7 +20,7 @@ Custom Software Deal Economics            Would the deal make economic sense?
 Custom Software Opportunity Cookbook      Where should we look for these deals?
 ```
 
-> **Fiction notice:** Every business, operational assumption, and financial figure in this repository is fictional and educational unless explicitly cited otherwise. A modeled result is a hypothesis, not market validation or financial advice.
+> **Fiction notice:** All businesses, operational metrics, financial values, labor assumptions, delivery estimates, sales assumptions, and support costs in this repository are fictional educational modeling assumptions unless explicitly cited otherwise. A modeled result is a hypothesis, not market validation or financial advice.
 
 ## Start here
 
@@ -141,3 +151,7 @@ MEANINGFUL PROBLEM
 ```
 
 The strongest pattern combines customer value, technical feasibility, authority, sustainable implementation/support, efficient acquisition, and both engineering and sales repeatability. The weakest opportunities fail a decisive gate even when another dimension looks excellent: Case 12 has an excellent-looking problem but a better product exists; Case 13 has value but cannot be built economically; Case 14 is a good referred project but a poor outbound market. These remain explainable dimensions, never an opaque opportunity score.
+
+## Final principle
+
+The goal is not to prove that custom software should be sold. The goal is to learn where custom software deserves to exist.

@@ -1,7 +1,7 @@
 from decimal import Decimal
 
 from opportunity_cookbook.analysis import analyze
-from opportunity_cookbook.comparison import (DEFINITIONS, PATTERN_CASES,
+from opportunity_cookbook.comparison import (BASELINE_CASES, PATTERN_CASES,
     comparison_rows, group_by_verdict, money_fields, render_comparison)
 from opportunity_cookbook.verdicts import Verdict
 
@@ -24,7 +24,7 @@ def test_case_12_is_post_alternative_and_no_variant_replaces_baseline():
     rows = comparison_rows()
     assert rows[11].analysis.verdict is Verdict.BUY_CONFIGURE
     assert rows[11].scenario.build_vs_buy.finding.value.startswith("existing buy/configure")
-    assert all(definition.builder.__name__ == "baseline_case" for definition in DEFINITIONS)
+    assert all(definition.builder.__name__ == "baseline_case" for definition in BASELINE_CASES)
 
 
 def test_money_is_decimal_and_grouping_is_deterministic():
