@@ -47,7 +47,7 @@ def test_strong_saas_changes_final_verdict_and_comparison_uses_it():
     assert analyze(case.final_scenario).verdict is Verdict.BUY_CONFIGURE
     assert case.recommendation == "Buy / configure"
     rows = implemented_case_comparison()
-    assert len(rows) == 13
+    assert len(rows) == 14
     assert rows[11].name == "Perfect-looking deal"
     assert rows[11].verdict == Verdict.BUY_CONFIGURE.value
     assert rows[11].verdict != analyze(case.stage_one).verdict.value

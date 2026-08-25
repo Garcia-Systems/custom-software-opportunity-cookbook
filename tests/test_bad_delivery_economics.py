@@ -110,9 +110,10 @@ def test_scenarios_cross_case_comparisons_and_implemented_rows_are_stable():
     assert case_12_vs_13()[1][1] == Verdict.NO_DEAL.value
     assert case_7_vs_13() == case_7_vs_13()
     rows = implemented_case_comparison()
-    assert len(rows) == 13
-    assert rows[-1].name == "Bad delivery economics"
-    assert rows[-1].verdict == Verdict.NO_DEAL.value
+    assert len(rows) == 14
+    assert rows[-2].name == "Bad delivery economics"
+    assert rows[-1].name == "Bad sales motion"
+    assert rows[-2].verdict == Verdict.NO_DEAL.value
 
 
 @pytest.mark.parametrize("hours,cost,rate", [(D("-1"), D("1"), D(".5")),

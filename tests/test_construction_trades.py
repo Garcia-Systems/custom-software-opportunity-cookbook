@@ -90,7 +90,7 @@ def test_verdict_reasons_remain_traceable_and_comparison_has_case_7():
         existing_saas_case, high_burden_case, low_burden_case,
         highly_customer_specific_case, unsustainable_support_case))
     rows = implemented_case_comparison()
-    assert len(rows) == 13
+    assert len(rows) == 14
     assert rows[6].name == "Construction / trades"
     assert rows[6].recoverable_value == baseline_case().recoverable_value
 

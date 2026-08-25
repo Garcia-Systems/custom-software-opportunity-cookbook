@@ -1,6 +1,6 @@
 # Case 13 — Great Customer Value, Bad Delivery Economics
 
-[← Previous: Case 12 — The Perfect-Looking Deal That Isn't](12-buy-dont-build.md) · [Book home](../README.md) · Next: Case 14 — planned (not implemented)
+[← Previous: Case 12 — The Perfect-Looking Deal That Isn't](12-buy-dont-build.md) · [Book home](../README.md) · [Next: Case 14 — Great Product, Bad Sales Motion →](14-bad-sales-motion.md)
 
 > **Fiction notice:** James River Specialty Distribution, every system, interface, workflow, labor rate, hour, price, and result below are invented educational assumptions—not a real distributor, vendor, benchmark, quote, or forecast.
 
@@ -180,4 +180,4 @@ Customer value is real, the proposed price is attractive to the customer, and no
 
 ---
 
-[← Previous: Case 12 — The Perfect-Looking Deal That Isn't](12-buy-dont-build.md) · [Book home](../README.md) · Next: Case 14 — planned (not implemented)
+[← Previous: Case 12 — The Perfect-Looking Deal That Isn't](12-buy-dont-build.md) · [Book home](../README.md) · [Next: Case 14 — Great Product, Bad Sales Motion →](14-bad-sales-motion.md)

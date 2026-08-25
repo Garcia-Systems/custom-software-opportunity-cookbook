@@ -35,6 +35,7 @@ python examples/university.py
 python examples/healthcare.py
 python examples/buy_dont_build.py
 python examples/bad_delivery_economics.py
+python examples/bad_sales_motion.py
 ```
 
 The editable installation makes the `src/` package importable by the example. Tests can also run directly from a checkout because pytest's path is configured in `pyproject.toml`.
@@ -55,7 +56,9 @@ The editable installation makes the `src/` package importable by the example. Te
 - [Case 11 — The Healthcare Organization](chapters/11-healthcare.md) — implemented
 - [Case 12 — The Perfect-Looking Deal That Isn't](chapters/12-buy-dont-build.md) — implemented
 - [Case 13 — Great Customer Value, Bad Delivery Economics](chapters/13-bad-delivery-economics.md) — implemented
-- Case 14 — planned, **not implemented**
+- [Case 14 — Great Product, Bad Sales Motion](chapters/14-bad-sales-motion.md) — implemented
+
+**Chapter 0 and Cases 1–14 are implemented; no planned individual cases remain.**
 
 ## Package map
 
@@ -90,6 +93,40 @@ The editable installation makes the `src/` package importable by the example. Te
 - `buy_dont_build.py`: immutable Case 12 two-stage discovery, residual-burden, four-option, edge, break-even, and scenario assumptions.
 - `examples/buy_dont_build.py`: executable Case 12 analysis and twelve-case comparison using the fully discovered verdict.
 - `bad_delivery_economics.py`: immutable Case 13 burden, delivery decomposition, price-corridor, redesign, and scenario assumptions.
-- `examples/bad_delivery_economics.py`: executable Case 13 analysis and thirteen-case comparison.
+- `examples/bad_delivery_economics.py`: executable Case 13 analysis and fourteen-case comparison.
+- `bad_sales_motion.py`: immutable Case 14 acquisition motion, contribution, channel, corridor, sensitivity, and scenario assumptions.
+- `examples/bad_sales_motion.py`: executable Case 14 analysis and final fourteen-case comparison.
 
 The tool evaluates opportunities; it does not implement a fictional customer's workflow.
+
+
+## Final casebook synthesis
+
+The fourteen cases expose failure modes directly rather than compressing them into a composite score:
+
+| Observable failure | Framework implication |
+|---|---|
+| **Problem too small** | insufficient value |
+| **Better existing product** | **BUY / CONFIGURE** |
+| **Delivery too expensive** | **NO DEAL** |
+| **Sales / procurement too expensive** | **POOR TARGET CUSTOMER** |
+| **Authority / access missing** | redesign, poor target, or pass |
+| **Support unsustainable** | redesign or **NO DEAL** |
+| **Low reuse** | possibly **ONE-OFF CUSTOM PROJECT** |
+
+The positive hypothesis is equally transparent:
+
+```text
+MEANINGFUL PROBLEM
++ MEASURABLE VALUE
++ INSUFFICIENT OFF-THE-SHELF SOLUTION
++ AUTHORIZED / ACCESSIBLE BUYER
++ FEASIBLE INTEGRATION
++ SUSTAINABLE DELIVERY
++ SUSTAINABLE SUPPORT
++ EFFICIENT SALES MOTION
++ USEFUL REPEATABILITY
+= PROMISING — VALIDATE IN DISCOVERY
+```
+
+The strongest pattern combines customer value, technical feasibility, authority, sustainable implementation/support, efficient acquisition, and both engineering and sales repeatability. The weakest opportunities fail a decisive gate even when another dimension looks excellent: Case 12 has an excellent-looking problem but a better product exists; Case 13 has value but cannot be built economically; Case 14 is a good referred project but a poor outbound market. These remain explainable dimensions, never an opaque opportunity score.
