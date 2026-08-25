@@ -163,4 +163,4 @@ Real discovery must determine who owns budgets and systems, who can approve inte
 
 ---
 
-[← Previous: Case 9 — The Local Government Department](09-local-government.md) · [Book home](../README.md) · Next: Case 11 — planned (not implemented)
+[← Previous: Case 9 — The Local Government Department](09-local-government.md) · [Book home](../README.md) · [Next: Case 11 — The Healthcare Organization →](11-healthcare.md)

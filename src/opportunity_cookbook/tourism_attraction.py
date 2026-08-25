@@ -200,7 +200,7 @@ class ImplementedCaseRow:
 
 
 def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
-    """Calculated comparison for implemented Cases 1–10; no composite score."""
+    """Calculated comparison for implemented Cases 1–11; no composite score."""
     from .analysis import analyze
     from .economics import reuse_percentage
     from .hotel_group import baseline_case as hotel_group
@@ -212,6 +212,7 @@ def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
     from .professional_services import baseline_case as professional_services
     from .local_government import baseline_case as local_government
     from .university import baseline_case as university
+    from .healthcare import baseline_case as healthcare
 
     sources = (("Independent restaurant", restaurant_case().scenario),
                ("Restaurant group", restaurant_group().scenario),
@@ -222,12 +223,14 @@ def implemented_case_comparison() -> tuple[ImplementedCaseRow, ...]:
                ("Construction / trades", construction().scenario),
                ("Professional services", professional_services().scenario),
                ("Local government", local_government().scenario),
-               ("University department", university().scenario))
+               ("University department", university().scenario),
+               ("Healthcare organization", healthcare().scenario))
     rows = []
     for name, scenario in sources:
         d = scenario.delivery
         hours = sum((d.reusable_engineering_hours, d.customer_specific_engineering_hours,
-                     d.qa_hours, d.deployment_hours, d.rework_reserve_hours), D("0"))
+                     d.qa_hours, d.deployment_hours, d.rework_reserve_hours,
+                     d.uncertainty_reserve_hours), D("0"))
         rows.append(ImplementedCaseRow(name, scenario.customer.recoverable_value,
             hours, reuse_percentage(d), analyze(scenario).verdict.value,
             scenario.technical.integration_complexity.value,

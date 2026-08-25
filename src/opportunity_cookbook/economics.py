@@ -43,7 +43,8 @@ def payback_period_months(c: CustomerEconomics) -> Decimal | None:
 
 def implementation_delivery_cost(d: DeliveryEconomics) -> Decimal:
     hours = (d.reusable_engineering_hours + d.customer_specific_engineering_hours
-             + d.qa_hours + d.deployment_hours + d.rework_reserve_hours)
+             + d.qa_hours + d.deployment_hours + d.rework_reserve_hours
+             + d.uncertainty_reserve_hours)
     return hours * d.engineering_hourly_cost + d.other_direct_costs
 
 
