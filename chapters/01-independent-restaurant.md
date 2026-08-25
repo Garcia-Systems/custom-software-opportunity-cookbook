@@ -1,6 +1,6 @@
 # Case 1 — The Independent Restaurant
 
-[Repository home](../README.md) · [Previous: Chapter 0](00-opportunity-framework.md)
+[← Previous: Chapter 0](00-opportunity-framework.md) · [Book home](../README.md) · [Next: Case 2 — The Five-Location Restaurant Group →](02-restaurant-group.md)
 
 > **Fiction notice:** James River Kitchen and every operational, effort, and financial value below are fictional educational assumptions. They are neither Williamsburg restaurant data nor industry benchmarks.
 
@@ -171,4 +171,4 @@ From the [repository setup](../README.md#start-here):
 python examples/independent_restaurant.py
 ```
 
-[Repository home](../README.md) · [Previous: Chapter 0](00-opportunity-framework.md)
+[← Previous: Chapter 0](00-opportunity-framework.md) · [Book home](../README.md) · [Next: Case 2 — The Five-Location Restaurant Group →](02-restaurant-group.md)

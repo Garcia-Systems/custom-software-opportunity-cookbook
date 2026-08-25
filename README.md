@@ -22,20 +22,10 @@ python -m venv .venv
 python -m pip install -e '.[test]'
 pytest
 python examples/opportunity_framework.py
+# Run any individual case (shown here with Case 1):
 python examples/independent_restaurant.py
-python examples/restaurant_group.py
-python examples/independent_hotel.py
-python examples/hotel_group.py
-python examples/tourism_attraction.py
-python examples/multi_location_retail.py
-python examples/construction_trades.py
-python examples/professional_services.py
-python examples/local_government.py
-python examples/university.py
-python examples/healthcare.py
-python examples/buy_dont_build.py
-python examples/bad_delivery_economics.py
-python examples/bad_sales_motion.py
+# Compare all 14 framework-generated baselines:
+python examples/compare_opportunities.py
 ```
 
 The editable installation makes the `src/` package importable by the example. Tests can also run directly from a checkout because pytest's path is configured in `pyproject.toml`.
@@ -57,8 +47,20 @@ The editable installation makes the `src/` package importable by the example. Te
 - [Case 12 — The Perfect-Looking Deal That Isn't](chapters/12-buy-dont-build.md) — implemented
 - [Case 13 — Great Customer Value, Bad Delivery Economics](chapters/13-bad-delivery-economics.md) — implemented
 - [Case 14 — Great Product, Bad Sales Motion](chapters/14-bad-sales-motion.md) — implemented
+- [Chapter 15 — Where Custom Software Deserves to Exist](chapters/15-cross-case-synthesis.md) — final cross-case synthesis (not Case 15)
 
-**Chapter 0 and Cases 1–14 are implemented; no planned individual cases remain.**
+**The book is complete: Chapter 0, Cases 1–14, and the Chapter 15 synthesis are implemented; no additional industry case is planned.**
+
+### Compact book structure
+
+| Part | Purpose |
+|---|---|
+| Chapter 0 | Reusable opportunity, economics, alternative, authority, support, sales, and verdict framework |
+| Cases 1–5 | Single-site, multi-site, hospitality, and seasonal reporting economics |
+| Cases 6–8 | Standardized categories, alternatives, and operational handoffs |
+| Cases 9–11 | Procurement, governance, authority, security, and validation |
+| Cases 12–14 | Isolated alternative, delivery, and acquisition failure modes |
+| Chapter 15 | Cross-case patterns, hypotheses, funnel, and non-scored screening checklist |
 
 ## Package map
 
@@ -96,11 +98,20 @@ The editable installation makes the `src/` package importable by the example. Te
 - `examples/bad_delivery_economics.py`: executable Case 13 analysis and fourteen-case comparison.
 - `bad_sales_motion.py`: immutable Case 14 acquisition motion, contribution, channel, corridor, sensitivity, and scenario assumptions.
 - `examples/bad_sales_motion.py`: executable Case 14 analysis and final fourteen-case comparison.
+- `comparison.py`: canonical baseline registry, common transparent economics, verdict grouping, structural pattern sets, and fixed rendering—without a composite score.
+- `examples/compare_opportunities.py`: canonical executable comparison of all fourteen baselines.
+- `chapters/15-cross-case-synthesis.md`: final good-project/good-market synthesis, discovery hypotheses, failure patterns, funnel, and practical checklist.
 
 The tool evaluates opportunities; it does not implement a fictional customer's workflow.
 
 
 ## Final casebook synthesis
+
+Read [Chapter 15 — Where Custom Software Deserves to Exist](chapters/15-cross-case-synthesis.md), then reproduce its evidence with:
+
+```bash
+python examples/compare_opportunities.py
+```
 
 The fourteen cases expose failure modes directly rather than compressing them into a composite score:
 
