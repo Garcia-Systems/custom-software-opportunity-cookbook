@@ -1,5 +1,7 @@
 # Case 12 — The Perfect-Looking Deal That Isn't
 
+![The Perfect-Looking Deal That Isn't](../images/chapters/12.png)
+
 > James River Equipment Services, ServiceFlow Pro, every workflow, and every financial value are fictional educational assumptions—not company facts, vendor claims, prices, or industry benchmarks.
 
 ## 1. Business

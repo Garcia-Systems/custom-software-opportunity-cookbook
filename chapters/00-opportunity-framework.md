@@ -1,5 +1,7 @@
 # Chapter 0 — How to Evaluate a Custom Software Opportunity
 
+![How to Evaluate a Custom Software Opportunity](../images/chapters/0.png)
+
 > What separates an interesting business problem from an economically viable custom-software opportunity?
 
 > **Fiction notice:** All businesses, operational metrics, financial values, labor assumptions, delivery estimates, sales assumptions, and support costs in this repository are fictional educational modeling assumptions unless explicitly cited otherwise.

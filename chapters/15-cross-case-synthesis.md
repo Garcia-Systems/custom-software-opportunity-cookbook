@@ -1,5 +1,7 @@
 # Chapter 15 — Where Custom Software Deserves to Exist
 
+![Where Custom Software Deserves to Exist](../images/chapters/15.png)
+
 > **Core question:** What do fourteen fictional opportunities teach us about where custom-software engagements are worth investigating?
 >
 > This is a synthesis chapter, **not Case 15**. Every business and uncited value remains a fictional educational assumption. The results generate hypotheses; they do not validate a market.

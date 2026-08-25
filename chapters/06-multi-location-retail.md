@@ -1,5 +1,7 @@
 # Case 6 — The Multi-Location Retailer
 
+![The Multi-Location Retailer](../images/chapters/6.png)
+
 > Every name and operational or financial value below is a fictional educational assumption, not a retailer benchmark.
 
 ## 1. Business

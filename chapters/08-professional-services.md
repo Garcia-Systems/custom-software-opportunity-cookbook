@@ -1,5 +1,7 @@
 # Case 8 — The Professional Services Firm
 
+![The Professional Services Firm](../images/chapters/8.png)
+
 > James River Advisory and every workflow, operational assumption, and financial value below are fictional educational assumptions—not consulting-industry benchmarks, forecasts, or advice.
 
 ## 1. Business
