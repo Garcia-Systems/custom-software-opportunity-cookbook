@@ -129,4 +129,4 @@ Customer value, delivery, reuse, and support are good. The target market motion 
 
 ---
 
-[← Previous: Case 13 — Great Customer Value, Bad Delivery Economics](13-bad-delivery-economics.md) · [Book home](../README.md) · [Next: Cross-case synthesis / comparison →](../README.md#final-casebook-synthesis)
+[← Previous: Case 13 — Great Customer Value, Bad Delivery Economics](13-bad-delivery-economics.md) · [Book home](../README.md) · [Next: Chapter 15 — Where Custom Software Deserves to Exist →](15-cross-case-synthesis.md)

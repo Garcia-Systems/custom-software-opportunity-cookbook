@@ -124,4 +124,4 @@ python examples/opportunity_framework.py
 
 The local-service scenario is intentionally small and wholly fictional. It demonstrates calculations and reason traceability; it is not Case 1 or evidence about an industry.
 
-Next: [Case 1 — The Independent Restaurant](01-independent-restaurant.md) · [Repository home](../README.md)
+[Book home](../README.md) · [Next: Case 1 — The Independent Restaurant →](01-independent-restaurant.md)

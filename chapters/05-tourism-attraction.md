@@ -117,4 +117,4 @@ Is this attractive because tourism operations are complex, or only because we mo
 
 ---
 
-[← Previous: Case 4 — The Small Hotel Group](04-hotel-group.md) · [Book home](../README.md) · Next: Case 6 — planned (not implemented)
+[← Previous: Case 4 — The Small Hotel Group](04-hotel-group.md) · [Book home](../README.md) · [Next: Case 6 — The Multi-Location Retailer →](06-multi-location-retail.md)

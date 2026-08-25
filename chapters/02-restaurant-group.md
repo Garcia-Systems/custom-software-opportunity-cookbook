@@ -235,4 +235,4 @@ The customer is attractive only if the first side grows faster. Real discovery m
 python examples/restaurant_group.py
 ```
 
-[Previous: Case 1](01-independent-restaurant.md) · [Book home](../README.md) · Next: Case 3 — planned
+[← Previous: Case 1](01-independent-restaurant.md) · [Book home](../README.md) · [Next: Case 3 — The Independent Hotel →](03-independent-hotel.md)
