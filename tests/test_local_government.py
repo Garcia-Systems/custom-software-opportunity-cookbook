@@ -73,8 +73,8 @@ def test_case_seven_nine_and_nine_case_comparison_are_deterministic():
     assert comparison.government_verdict == "POOR TARGET CUSTOMER"
     assert comparison.government_solutions_hours > comparison.construction_solutions_hours
     rows = implemented_case_comparison()
-    assert len(rows) == 9 and rows[-1].name == "Local government"
-    assert rows[-1].sales_procurement_difficulty == "high"
+    assert len(rows) == 10 and rows[-2].name == "Local government"
+    assert rows[-2].sales_procurement_difficulty == "high"
 
 
 @pytest.mark.parametrize("units,cost,rate", [(D("-1"), D("1"), D(".5")), (D("1"), D("-1"), D(".5")), (D("1"), D("1"), D("1.1"))])
